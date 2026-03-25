@@ -13,14 +13,14 @@ export class ProductsPage extends BasePage {
 
     constructor(page: Page) {
         super(page);
-        this.title = page.locator('.title');
-        this.backpack = page.locator('[data-test="add-to-cart-sauce-labs-backpack"]');
-        this.bikeLight = page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]');
-        this.boltTshirt = page.locator('[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]');
-        this.fleeceJacket = page.locator('[data-test="add-to-cart-sauce-labs-fleece-jacket"]');
-        this.onesie = page.locator('[data-test="add-to-cart-sauce-labs-onesie"]');
-        this.redTshirt = page.locator('[data-test="add-to-cart-sauce-labs-red-t-shirt"]');
-        this.shoppingCart = page.locator('.shopping_cart_link');
+        this.title = page.getByTestId('title');
+        this.backpack = page.getByTestId('add-to-cart-sauce-labs-backpack');
+        this.bikeLight = page.getByTestId('add-to-cart-sauce-labs-bike-light');
+        this.boltTshirt = page.getByTestId('add-to-cart-sauce-labs-bolt-t-shirt');
+        this.fleeceJacket = page.getByTestId('add-to-cart-sauce-labs-fleece-jacket');
+        this.onesie = page.getByTestId('add-to-cart-sauce-labs-onesie');
+        this.redTshirt = page.getByTestId('add-to-cart-sauce-labs-red-t-shirt');
+        this.shoppingCart = page.getByTestId('shopping_cart_link');
     }
 
     async getTitle(): Promise<string> {
