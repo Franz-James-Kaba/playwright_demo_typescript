@@ -19,7 +19,7 @@ test.describe("Products Page Tests", () => {
     });
 
     test("Verify products can be added to cart", async({page}) => {
-        await productsPage.productLocator ("add-to-cart-sauce-labs-backpack");
+        await productsPage.productLocator ("backpack");
         await expect(productsPage.shoppingCartBadge).toHaveText("1");
         await productsPage.clickShoppingCart();
         await expect(page.getByTestId("inventory-item-name")).toHaveText("Sauce Labs Backpack");

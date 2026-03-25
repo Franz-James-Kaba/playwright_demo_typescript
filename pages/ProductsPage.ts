@@ -15,8 +15,8 @@ export class ProductsPage extends BasePage {
         return await this.title.textContent() || '';
     }
 
-    async productLocator(productLocator: string): Promise<void> {
-        await this.page.getByTestId(productLocator).click();
+    async productLocator(productName: string): Promise<void> {
+        await this.page.getByTestId(`add-to-cart-sauce-labs-${productName.toLowerCase()}`).click();
     }
 
     get shoppingCartBadge(): Locator {
